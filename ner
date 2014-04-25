@@ -1,0 +1,25 @@
+# Fusepool Data upload and NER
+
+## Important graphs
+
+* Please list which graph is used where
+
+## Entities & Facets
+
+For NER you need to define entities which will be used for extraction.
+
+## Triggering NER
+
+
+Grundkonzept:
+- RDF Digester, nimmt die Daten und ändert die relevanten resourcen auf sioc:Content, dc:subject zu den "terms" (die Entitäten/Facets).
+
+Fertiger Content in content-graph, ist direkt verfügbar.
+
+/ecs/reindex um es zu indexieren
+
+zusatzentities (NER) über default chain -> über DLC
+
+enhancer der aus sioc und gegebenem rdf die entities raushaut (null-digester statt einer der vordefinierten).
+
+DLC -> Luigi
