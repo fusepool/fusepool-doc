@@ -1,1 +1,4 @@
 # Important URIs in Fusepool
+
+* RDF Data upload: (http://example.org/admin/graphs/)
+* SPARQL endpoint (HTML frontend): (http://example.org/sparql/form/)

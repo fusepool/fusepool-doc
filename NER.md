@@ -17,9 +17,10 @@ NER will be done on all content in digest.rdf graph of your dataset which fullfi
 * Upload the dictionary which meets the following criteria
 
 `<http://example.org/mytermxy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .`
-`<http://example.org/mytermxy> <http://purl.org/dc/elements/1.1/subject> "MySubjectToFind" . 
+`<http://example.org/mytermxy> <http://purl.org/dc/elements/1.1/subject> "MySubjectToFind" . `
+`<http://example.org/mytermxy> <http://www.w3.org/2000/01/rdf-schema#label> "MySubjectToFind" . `
 
-So the dictionary expects two triples per subject to find as of now
+So the dictionary expects tree triples per subject to find as of now. The `rdfs:label` is required for Firstswim. In case this one is missing it will not show up in Firstswim.
 
 * Go to the [OSGi configuration console](http://localhost:8080/system/console/configMgr)
 * Search for "Fusepool Enhancer Engine: Dictionary Annotator", click on the `+ sign
@@ -38,4 +39,5 @@ So the dictionary expects two triples per subject to find as of now
 * Now the CPU should create some load and go through the default chain where we added our NER as well
 * When it returns, select "Smush" and "Publish"
 * At the end of the "Publish" process it should show up in "content" graph in the [http://localhost:8080/admin/graphs/](http://localhost:8080/admin/graphs/) interface
+* You have to add the dictionary to the content graph as well to make sure it shows up in Firstswim. This might change later but currently this is mandatory.
 * This is it from a NER perspective
